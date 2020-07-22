@@ -1,1 +1,5 @@
-<p>progress works!</p>
+<div class="form-group" *ngIf="progress > 0">
+  <div class="progress">
+    <div class="progress-bar" [style.width.%]="progress">{{ progress }}%</div>
+  </div>
+</div>

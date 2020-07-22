@@ -1,7 +1,17 @@
 <form [formGroup]="signup" (ngSubmit)="submit()">
   <div class="form-group">
     <label>Email address</label>
-    <input type="email" formControlName="email" />
+    <input
+      type="email"
+      class="form-control"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <div class="invalid-feedback" style="display: block;">
+      <ng-container *ngIf="hasError('email', 'required')"
+        >This field is required</ng-container
+      >
+    </div>
   </div>
 
   <app-file-upload
